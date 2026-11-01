@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2564 Laurier – following the build of 18 rental homes</title>
+<meta name="description" content="2564 Laurier converts a single-family home into six stacked townhomes with 18 rental units. Follow the progress and get in touch to find out how to be involved.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EDEFEE; --ink:#1B2831; --muted:#58656D; --line:#C9CFD1;
+  --panel:#E1E5E4; --accent:#2E6A5C; --accent-ink:#fff; --win:#F2D98D;
+  --display:"Familjen Grotesk","Helvetica Neue",Arial,sans-serif;
+  --body:"Literata",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#141C21; --ink:#E8ECEA; --muted:#95A3AA; --line:#2B3841; --panel:#1B262D; --accent:#5FB5A0; --accent-ink:#0E1518; --win:#E8C969}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.65}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
+h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(2.8rem,8vw,5.5rem);font-weight:700}
+h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700;margin-bottom:1rem}
+h3{font-size:1.2rem;font-weight:700;margin-bottom:.35rem}
+p{margin:0 0 1rem;max-width:62ch}
+.btn{display:inline-block;font-family:var(--display);font-weight:700;font-size:1.05rem;background:var(--accent);color:var(--accent-ink);padding:.9rem 1.6rem;border:0;border-radius:2px;text-decoration:none;cursor:pointer}
+.btn:hover{filter:brightness(1.1)}
+header.top{border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem}
+.logo{font-family:var(--display);font-weight:700;font-size:1.25rem;text-decoration:none}
+nav a{font-family:var(--display);font-weight:500;text-decoration:none;margin-left:1.4rem}
+nav a:hover{text-decoration:underline}
+@media(max-width:620px){nav a:not(.cta){display:none}}
+
+.hero{padding:3.5rem 0 0}
+.hero p.lede{font-size:1.25rem;margin:1.2rem 0 1.8rem}
+.elev{display:block;width:100%;height:auto;margin-top:3rem}
+.elev .wall{fill:var(--panel);stroke:var(--ink);stroke-width:2}
+.elev .win{fill:var(--win);stroke:var(--ink);stroke-width:1.5}
+.elev .door{fill:var(--ink)}
+.elev text{font-family:var(--display);font-size:13px;fill:var(--muted)}
+.elev .ground{stroke:var(--ink);stroke-width:3}
+
+section{padding:4.5rem 0}
+section+section{border-top:1px solid var(--line)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:2rem 1.5rem;margin-top:2rem}
+.facts dt{font-family:var(--display);font-size:2.6rem;font-weight:700;line-height:1}
+.facts dd{margin:.4rem 0 0;color:var(--muted);font-size:.95rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+@media(max-width:760px){.two{grid-template-columns:1fr;gap:1.5rem}}
+.reasons{display:grid;gap:2rem;margin-top:2rem}
+@media(min-width:760px){.reasons{grid-template-columns:repeat(3,1fr)}}
+.reasons div{border-top:3px solid var(--accent);padding-top:1rem}
+.reasons p{font-size:.98rem}
+.tablewrap{overflow-x:auto;margin-top:1.5rem}
+table{border-collapse:collapse;width:100%;min-width:30rem}
+th,td{text-align:left;padding:.8rem 1rem;border-bottom:1px solid var(--line)}
+th{font-family:var(--display);font-weight:500;color:var(--muted);font-size:.95rem}
+td.num{font-family:var(--display);font-weight:700}
+.ph{background:var(--win);color:#1B2831;padding:0 .35rem;border-radius:2px}
+ol.timeline{list-style:none;padding:0;margin:2rem 0 0;border-left:3px solid var(--line)}
+ol.timeline li{padding:0 0 1.6rem 1.5rem;position:relative}
+ol.timeline li::before{content:"";position:absolute;left:-.55rem;top:.55rem;width:.8rem;height:.8rem;background:var(--accent);border-radius:50%}
+ol.timeline strong{font-family:var(--display);display:block}
+form{display:grid;gap:1.1rem;max-width:34rem;margin-top:1.5rem}
+label{font-family:var(--display);font-weight:500;display:grid;gap:.35rem}
+input,select,textarea{font:inherit;color:inherit;background:var(--paper);border:1.5px solid var(--ink);border-radius:2px;padding:.7rem .8rem;width:100%}
+.hp{position:absolute;left:-9999px}
+ol.timeline li.done::before{background:var(--ink)}
+ol.timeline li.now::before{box-shadow:0 0 0 5px color-mix(in srgb,var(--accent) 30%,transparent)}
+.tag{display:inline-block;margin-left:.6rem;font-size:.8rem;font-weight:500;background:var(--accent);color:var(--accent-ink);padding:.05rem .55rem;border-radius:2px;vertical-align:middle}
+.updates{display:grid;gap:1.5rem;margin-top:1rem;max-width:44rem}
+.updates article{border-top:1px solid var(--line);padding-top:1rem}
+.updates img{max-width:100%;height:auto;border-radius:2px;margin:.5rem 0 1rem;display:block}
+.updates time{font-family:var(--display);color:var(--muted);font-size:.9rem}
+.updates h4{font-family:var(--display);font-size:1.2rem;margin:.2rem 0 .4rem}
+footer{border-top:1px solid var(--line);padding:2.5rem 0;color:var(--muted);font-size:.88rem}
+footer p{max-width:75ch}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">2564 Laurier</a>
+    <nav aria-label="Main">
+      <a href="#project">Project</a>
+      <a href="#progress">Progress</a>
+      <a href="#involved">Get involved</a>
+      <a class="cta" href="#follow">Follow along</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <h1>One house.<br>Eighteen homes.</h1>
+    <p class="lede">2564 Laurier turns a single-family lot into six stacked townhomes with 18 rental units, adding housing without leaving the neighbourhood. Follow it from the first drawing to the first tenant.</p>
+    <a class="btn" href="#follow">Follow the progress</a>
+
+    <svg class="elev" viewBox="0 0 960 330" role="img" aria-label="Illustrative front elevation: six stacked townhomes, each with three rental units, one above the other">
+      <title>Illustrative elevation: 6 townhomes × 3 units = 18 homes</title>
+      <line class="ground" x1="0" y1="300" x2="960" y2="300"/>
+      <g id="bays"></g>
+      <text x="0" y="322">Illustration only. Final design, massing and finishes to be confirmed.</text>
+    </svg>
+  </div>
+</div>
+
+<section id="project">
+  <div class="wrap">
+    <h2>The project</h2>
+    <div class="two">
+      <div>
+        <p>2564 Laurier is an infill development. We are replacing one single-family home with six stacked townhomes, each holding three rental units, for 18 homes on a lot that now houses one household.</p>
+        <p>The building stays in the neighbourhood's scale while using the land far more efficiently. It is designed to be held and operated as a long-term rental.</p>
+      </div>
+      <dl class="facts">
+        <div><dt>1 → 18</dt><dd>Households on the site, before and after</dd></div>
+        <div><dt>6</dt><dd>Stacked townhomes</dd></div>
+        <div><dt>3</dt><dd>Rental units per townhome</dd></div>
+        <div><dt>14,000</dt><dd>Total residential area (sq. ft.)</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="progress">
+  <div class="wrap">
+    <h2>Progress</h2>
+    <p>Where the project stands today, and what comes next.</p>
+    <ol class="timeline">
+      <li class="done"><strong>Site acquired</strong>Land secured in February 2024.</li>
+      <li class="now"><strong>Design and permits<span class="tag">In progress</span></strong>Architecture, zoning and building permit approvals. Permit approval expected Winter 2026/27.</li>
+      <li><strong>Construction</strong>Demolition of the existing house and build of the six townhomes. Construction begins Spring 2027.</li>
+      <li><strong>Move-in</strong>Units open to tenants in Summer 2028.</li>
+    </ol>
+
+    <h3 style="margin-top:3rem">Latest updates</h3>
+    <div class="updates" id="updates" aria-live="polite">
+      <p class="empty">The first update is coming soon. <a href="#follow">Sign up</a> to be notified.</p>
+    </div>
+  </div>
+</section>
+
+<section id="follow">
+  <div class="wrap">
+    <h2>Follow along</h2>
+    <p>Leave your email and you will get a short note when there is news: permits, construction milestones, and move-in dates. No spam.</p>
+    <form name="follow-updates" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="follow-updates">
+      <p class="hp"><label>Leave this empty <input name="bot-field"></label></p>
+      <label>Email <input type="email" name="email" autocomplete="email" required></label>
+      <div><button class="btn" type="submit">Send me updates</button></div>
+    </form>
+  </div>
+</section>
+
+<section id="involved">
+  <div class="wrap">
+    <h2>Want to be involved?</h2>
+    <p>There are different ways to be part of 2564 Laurier. If you are curious, send a message and I will get back to you personally to talk it through.</p>
+    <form name="get-involved" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="get-involved">
+      <p class="hp"><label>Leave this empty <input name="bot-field"></label></p>
+      <label>Name <input type="text" name="name" autocomplete="name" required></label>
+      <label>Email <input type="email" name="email" autocomplete="email" required></label>
+      <label>Phone (optional) <input type="tel" name="phone" autocomplete="tel"></label>
+      <label>A bit about you and your interest <textarea name="message" rows="4"></textarea></label>
+      <div><button class="btn" type="submit">Get in touch</button></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>2564 Laurier</strong> · Rockland, Ontario · <a href="mailto:dennis@jade4.ca">dennis@jade4.ca</a></p>
+    <p>This website is for general information about the project and is not an offer to sell or a solicitation to buy securities. Renderings are illustrative and dates are estimates that may change.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var box=document.getElementById('updates');
+  if(!box||!window.fetch)return;
+  fetch('content/updates.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).then(function(d){
+    var posts=d&&d.posts;
+    if(!posts||!posts.length)return;
+    posts=posts.slice().sort(function(a,b){return String(b.date).localeCompare(String(a.date))});
+    box.textContent='';
+    posts.forEach(function(p){
+      var a=document.createElement('article'),t=document.createElement('time'),h=document.createElement('h4');
+      var dt=new Date(p.date+'T00:00:00Z');
+      t.dateTime=p.date;
+      t.textContent=isNaN(dt)?p.date:dt.toLocaleDateString('en-CA',{year:'numeric',month:'long',day:'numeric',timeZone:'UTC'});
+      h.textContent=p.title||'';
+      a.appendChild(t);a.appendChild(h);
+      if(p.image){var i=document.createElement('img');i.src=p.image;i.alt=p.image_alt||'';i.loading='lazy';a.appendChild(i)}
+      String(p.body||'').split(/\n\s*\n/).forEach(function(para){
+        if(!para.trim())return;
+        var e=document.createElement('p');e.textContent=para.trim();a.appendChild(e)
+      });
+      box.appendChild(a)
+    })
+  }).catch(function(){})
+})();
+</script>
+<script>
+(function(){
+  var g=document.getElementById('bays'),ns='http://www.w3.org/2000/svg',bayW=160,levels=3,h=92,y0=300;
+  function el(n,a){var e=document.createElementNS(ns,n);for(var k in a)e.setAttribute(k,a[k]);return e}
+  for(var b=0;b<6;b++){
+    var x=b*bayW+4;
+    for(var l=0;l<levels;l++){
+      var y=y0-(l+1)*h;
+      g.appendChild(el('rect',{class:'wall',x:x,y:y,width:bayW-8,height:h}));
+      g.appendChild(el('rect',{class:'win',x:x+22,y:y+16,width:44,height:48}));
+      g.appendChild(el('rect',{class:'win',x:x+bayW-8-66,y:y+16,width:44,height:48}));
+      if(l===0){g.appendChild(el('rect',{class:'door',x:x+(bayW-8)/2-9,y:y+34,width:18,height:h-34}));}
+    }
+  }
+})();
+</script>
+</body>
+</html>
