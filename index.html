@@ -41,7 +41,9 @@ nav a:hover{text-decoration:underline}
 
 .hero{padding:3.5rem 0 0}
 .hero p.lede{font-size:1.25rem;margin:1.2rem 0 1.8rem}
-.elev{display:block;width:100%;height:auto;margin-top:3rem}
+.hero-img{margin:3rem 0 0}
+.hero-img img{display:block;width:100%;height:auto;border-radius:2px}
+.hero-img figcaption{font-family:var(--display);font-size:.85rem;color:var(--muted);margin-top:.6rem}
 .elev .wall{fill:var(--panel);stroke:var(--ink);stroke-width:2}
 .elev .win{fill:var(--win);stroke:var(--ink);stroke-width:1.5}
 .elev .door{fill:var(--ink)}
@@ -106,12 +108,7 @@ footer p{max-width:75ch}
     <p class="lede">2564 Laurier turns a single-family lot into six stacked townhomes with 18 rental units, adding housing without leaving the neighbourhood. Follow it from the first drawing to the first tenant.</p>
     <a class="btn" href="#follow">Follow the progress</a>
 
-    <svg class="elev" viewBox="0 0 960 330" role="img" aria-label="Illustrative front elevation: six stacked townhomes, each with three rental units, one above the other">
-      <title>Illustrative elevation: 6 townhomes × 3 units = 18 homes</title>
-      <line class="ground" x1="0" y1="300" x2="960" y2="300"/>
-      <g id="bays"></g>
-      <text x="0" y="322">Illustration only. Final design, massing and finishes to be confirmed.</text>
-    </svg>
+    <figure class="hero-img"><img src="images/elevation.jpg" alt="Rendering of the 2564 Laurier stacked townhomes at dusk, with white and grey board-and-batten siding, balconies and front entry stairs" width="1142" height="666"><figcaption>Rendering. Final design and finishes to be confirmed.</figcaption></figure>
   </div>
 </div>
 
@@ -212,22 +209,6 @@ footer p{max-width:75ch}
       box.appendChild(a)
     })
   }).catch(function(){})
-})();
-</script>
-<script>
-(function(){
-  var g=document.getElementById('bays'),ns='http://www.w3.org/2000/svg',bayW=160,levels=3,h=92,y0=300;
-  function el(n,a){var e=document.createElementNS(ns,n);for(var k in a)e.setAttribute(k,a[k]);return e}
-  for(var b=0;b<6;b++){
-    var x=b*bayW+4;
-    for(var l=0;l<levels;l++){
-      var y=y0-(l+1)*h;
-      g.appendChild(el('rect',{class:'wall',x:x,y:y,width:bayW-8,height:h}));
-      g.appendChild(el('rect',{class:'win',x:x+22,y:y+16,width:44,height:48}));
-      g.appendChild(el('rect',{class:'win',x:x+bayW-8-66,y:y+16,width:44,height:48}));
-      if(l===0){g.appendChild(el('rect',{class:'door',x:x+(bayW-8)/2-9,y:y+34,width:18,height:h-34}));}
-    }
-  }
 })();
 </script>
 </body>
