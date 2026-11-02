@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/2564-laurier   # change this to your GitHub repo
+  repo: tanguayd/2564-laurier   # change this to your GitHub repo
   branch: main
 
 media_folder: "images/updates"
