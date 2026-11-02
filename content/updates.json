@@ -1,16 +1,16 @@
 {
   "posts": [
     {
-      "date": "2026-10-30",
-      "title": "More survey work",
-      "body": "Engaging the services of my surveyor again to satisfy conditions for the consent (to sever).\n\nSurveyor will also do some investigation on the services around the project.",
-      "image": "/images/updates/image_bef453d.jpg"
-    },
-    {
       "date": "2024-02-22",
       "title": "Purchase",
       "body": "Closed on the property. Not much to look at but the location is key",
       "image": "/images/updates/img_20240509_170549.jpg"
+    },
+    {
+      "date": "2026-10-30",
+      "title": "More survey work",
+      "body": "Engaging the services of my surveyor again to satisfy conditions for the consent (to sever).\n\nSurveyor will also do some investigation on the services around the project.",
+      "image": "/images/updates/image_bef453d.jpg"
     }
   ]
 }
