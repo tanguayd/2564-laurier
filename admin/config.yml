@@ -1,0 +1,27 @@
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/2564-laurier   # change this to your GitHub repo
+  branch: main
+
+media_folder: "images/updates"
+public_folder: "/images/updates"
+
+collections:
+  - name: "site"
+    label: "Site content"
+    files:
+      - name: "updates"
+        label: "Project updates"
+        file: "content/updates.json"
+        fields:
+          - label: "Posts"
+            name: "posts"
+            widget: "list"
+            label_singular: "post"
+            summary: "{{fields.date}} – {{fields.title}}"
+            fields:
+              - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text (leave a blank line between paragraphs)", name: "body", widget: "text" }
+              - { label: "Photo (optional)", name: "image", widget: "image", required: false }
+              - { label: "Photo description (for screen readers)", name: "image_alt", widget: "string", required: false }
